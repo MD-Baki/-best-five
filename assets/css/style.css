@@ -35,20 +35,24 @@ header h1 {
 header h1::before {
     position: absolute;
     content: url(../images/Line-Marker.png);
-    right: -82px;
-    bottom: -35px;
+    right: -65px;
+    bottom: -40px;
 }
 
 /* ||Header Css End|| */
 
 /* Player List Css Start */
-.players_card .select_btn {
-    background: #0084fb;
+.active {
+    border: 2px solid #0084fb !important;
 }
 
 .players_card .player_info {
     color: #B3B3B3;
     font-size: 15px;
+}
+
+.players_card .select_btn {
+    background: #0084fb;
 }
 
 .players_card .disable {
@@ -58,8 +62,21 @@ header h1::before {
 /* ||Playr List Css End|| */
 
 /* Side Bar Css Start */
+.side_bar ol {
+    list-style-type: decimal;
+}
+
 .side_bar ol li {
-    line-height: 30px;
+    line-height: 35px;
+}
+
+.side_bar input {
+    background-color: transparent;
+    border: 1px solid #b3b3b3;
+}
+
+.side_bar input:focus-visible {
+    outline: inherit;
 }
 
 /* ||Side Bar Css End|| */
