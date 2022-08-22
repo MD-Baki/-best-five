@@ -1,0 +1,65 @@
+/* Common Css Start */
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Manrope:wght@400;700&display=swap');
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: #040418;
+}
+
+/* ||Common Css End|| */
+
+/* Header Css Start */
+header {
+    position: relative;
+    background: url(../images/banner1.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    z-index: 1;
+}
+
+header::after {
+    position: absolute;
+    content: '';
+    inset: 0;
+    background-color: rgba(0, 0, 0, 70%);
+    z-index: -1;
+}
+
+header h1 {
+    font-family: 'Berkshire Swash', cursive;
+    position: relative;
+    display: inline-block;
+}
+
+header h1::before {
+    position: absolute;
+    content: url(../images/Line-Marker.png);
+    right: -82px;
+    bottom: -35px;
+}
+
+/* ||Header Css End|| */
+
+/* Player List Css Start */
+.players_card .select_btn {
+    background: #0084fb;
+}
+
+.players_card .player_info {
+    color: #B3B3B3;
+    font-size: 15px;
+}
+
+.players_card .disable {
+    background: #29283d;
+}
+
+/* ||Playr List Css End|| */
+
+/* Side Bar Css Start */
+.side_bar ol li {
+    line-height: 30px;
+}
+
+/* ||Side Bar Css End|| */
