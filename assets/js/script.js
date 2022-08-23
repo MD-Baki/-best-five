@@ -1,3 +1,4 @@
+// Select Player Function
 const selectAllBtn = document.querySelectorAll(".select_btn");
 
 const selectPlayerList = document.getElementById("select-players");
@@ -17,6 +18,7 @@ for (const selectBtn of selectAllBtn) {
             event.target.parentNode.parentNode.classList.add("active");
 
             const li = document.createElement("li");
+            li.classList.add("mb-2")
             li.innerText = playerName;
             selectPlayerList.appendChild(li);
         }
@@ -26,17 +28,25 @@ for (const selectBtn of selectAllBtn) {
     })
 }
 
+// Player budget Function
 function getNumberFromFilde(id) {
     const fildeName = document.getElementById(id);
     const stringValue = fildeName.value;
     const convertNumber = parseInt(stringValue);
     return convertNumber;
 }
+
+function getValueFromText(id) {
+    const fildeName = document.getElementById(id);
+    const stringValue = fildeName.innerText;
+    const convertNumber = parseInt(stringValue);
+    return convertNumber;
+}
+
 function setValueById(id, value) {
     const valueId = document.getElementById(id);
     valueId.innerText = value;
 }
-
 
 const playerCost = document.getElementById("player-cost");
 playerCost.addEventListener("click", function () {
@@ -51,8 +61,25 @@ const totalCost = document.getElementById("calc-total-btn");
 totalCost.addEventListener("click", function () {
 
     const playerTotalCost = getValueFromText("player-expenses");
-    const managerCost = getElementById("manager-cost");
-    const coachCost = getElementById("coach-cost");
+    const managerCost = getNumberFromFilde("manager-cost");
+    console.log(managerCost);
+    const coachCost = getNumberFromFilde("coach-cost");
+    console.log(coachCost);
     const finalCost = playerTotalCost + managerCost + coachCost;
-    setTextById("total", finalCost);
+    setValueById("totalCost", finalCost);
 })
+
+// Alert function
+const selectAllInput = document.querySelectorAll("input");
+for (const input of selectAllInput) {
+    input.addEventListener("keyup", function (event) {
+        const number = parseInt(event.target.value);
+        if (isNaN(number)) {
+            alert("Plase type valid number");
+            event.target.value = "";
+        }
+
+
+    })
+
+}
