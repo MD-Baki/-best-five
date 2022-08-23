@@ -42,8 +42,28 @@ header h1::before {
 /* ||Header Css End|| */
 
 /* Player List Css Start */
+.player_img {
+    position: relative;
+}
+
+.player_img .overlay {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    visibility: hidden;
+}
+
+.overlay img {
+    width: 30px;
+    height: 30px;
+}
+
 .active {
     border: 2px solid #0084fb !important;
+}
+
+.active .overlay {
+    visibility: visible;
 }
 
 .players_card .player_info {
@@ -77,6 +97,7 @@ header h1::before {
 
 .side_bar input:focus-visible {
     outline: inherit;
+    border: 1px solid #0084fb;
 }
 
 /* ||Side Bar Css End|| */
